@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+<link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<!-- step-1 start -->
+<section class="step-1">
+  <div class="left-bar">
+<div class="Personal-info">
+  <div class="info">
+  <div class="num1">1</div>
+  <div class="text">  <p>Step 1</p>
+    <h1>Your info</h1></div>
+</div>
+<div class="info">
+  <div class="num">2</div>
+  <div class="text">  <p>Step 2</p>
+    <h1> Select plan</h1></div>
+</div>
+<div class="info">
+  <div class="num">3</div>
+  <div class="text">  <p>Step 3</p>
+    <h1>  Add-ons</h1></div>
+</div>
+<div class="info">
+  <div class="num">4</div>
+  <div class="text">  <p>Step 4</p>
+    <h1>  Summary</h1></div>
+</div>
+</div>
+  </div>
+  <div class="right-bar">
+    <h1> Personal info</h1>
+    <p> Please provide your name, email address, and phone number.</p>
+    <label>Name</label>
+    <span id="name-eror"></span>
+    <br>
+    <input id="name" type="text" placeholder=" e.g. Stephen King">
+    <br>
+    <label>Email Adress</label>\
+    <span id="email-eror"></span>
+    <br>
+    <input id="email" type="email" placeholder="e.g. stephenking@lorem.com">
+    <br>
+    <label> Phone Number</label>
+    <span id="phone-eror"></span>
+    <br>
+    <input id="phone" type="text" placeholder="  e.g. +1 234 567 890">
+    <br>
+    <button onclick="chekstep1()" type="submit">Next Step</button>
+  </div>
+</section>
+
+
+<!-- step-1 end -->
+
+
+
+<!-- step-2 start -->
+
+<section class="step-2">
+  <div class="left-bar">
+<div class="Personal-info">
+  <div class="info">
+  <div class="num">1</div>
+  <div class="text">  <p>Step 1</p>
+    <h1>Your info</h1></div>
+</div>
+<div class="info">
+  <div class="num1">2</div>
+  <div class="text">  <p>Step 2</p>
+    <h1> Select plan</h1></div>
+</div>
+<div class="info">
+  <div class="num">3</div>
+  <div class="text">  <p>Step 3</p>
+    <h1>  Add-ons</h1></div>
+</div>
+<div class="info">
+  <div class="num">4</div>
+  <div class="text">  <p>Step 4</p>
+    <h1>  Summary</h1></div>
+</div>
+</div>
+  </div>
+  <div class="right-bar">
+    <h1>Select your plan</h1>
+    <p>You have the option of monthly or yearly billing.</p>
+    <div class="chose">
+      <div id="div" onclick="change()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#FFAF7E"/><path fill="#FFF" fill-rule="nonzero" d="M24.995 18.005h-3.998v5.998h-2v-5.998H15a1 1 0 0 0-1 1V29a1 1 0 0 0 1 1h9.995a1 1 0 0 0 1-1v-9.995a1 1 0 0 0-1-1Zm-5.997 8.996h-2v-1.999h2v2Zm2-11.175a2.999 2.999 0 1 0-2 0v2.18h2v-2.18Z"/></g></svg>
+        <h2>Arcade</h2>
+        <p id="info-price">  $9/mo</p>
+        <h6 id="free-months"> 2 months free</h6>
+      </div>
+      <div id="div2" class="second" onclick="change2()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#F9818E"/><path fill="#FFF" fill-rule="nonzero" d="M25.057 15H14.944C12.212 15 10 17.03 10 19.885c0 2.857 2.212 4.936 4.944 4.936h10.113c2.733 0 4.943-2.08 4.943-4.936S27.79 15 25.057 15ZM17.5 20.388c0 .12-.108.237-.234.237h-1.552v1.569c0 .126-.138.217-.259.217H14.5c-.118 0-.213-.086-.213-.203v-1.583h-1.569c-.126 0-.217-.139-.217-.26v-.956c0-.117.086-.213.202-.213h1.584v-1.554c0-.125.082-.231.203-.231h.989c.12 0 .236.108.236.234v1.551h1.555c.125 0 .231.083.231.204v.988Zm5.347.393a.862.862 0 0 1-.869-.855c0-.472.39-.856.869-.856.481 0 .87.384.87.856 0 .471-.389.855-.87.855Zm1.9 1.866a.86.86 0 0 1-.87-.852.86.86 0 0 1 .87-.855c.48 0 .87.38.87.855a.86.86 0 0 1-.87.852Zm0-3.736a.862.862 0 0 1-.87-.854c0-.472.39-.856.87-.856s.87.384.87.856a.862.862 0 0 1-.87.854Zm1.899 1.87a.862.862 0 0 1-.868-.855c0-.472.389-.856.868-.856s.868.384.868.856a.862.862 0 0 1-.868.855Z"/></g></svg>
+        <h2>Advanced</h2>
+        <p id="info-price2">$12/mo</p>
+        <h6 id="free-months2"> 2 months free</h6>
+      </div>
+      <div id="div3" class="third" onclick="change3()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#483EFF"/><path fill="#FFF" fill-rule="nonzero" d="M26.666 13H13.334A3.333 3.333 0 0 0 10 16.333v7.193a3.447 3.447 0 0 0 2.14 3.24c1.238.5 2.656.182 3.56-.8L18.52 23h2.96l2.82 2.966a3.2 3.2 0 0 0 3.56.8 3.447 3.447 0 0 0 2.14-3.24v-7.193A3.333 3.333 0 0 0 26.666 13Zm-9.333 6H16v1.333a.667.667 0 0 1-1.333 0V19h-1.333a.667.667 0 0 1 0-1.334h1.333v-1.333a.667.667 0 1 1 1.333 0v1.333h1.333a.667.667 0 1 1 0 1.334Zm7.333 2a2.667 2.667 0 1 1 0-5.333 2.667 2.667 0 0 1 0 5.333ZM26 18.333a1.333 1.333 0 1 1-2.667 0 1.333 1.333 0 0 1 2.667 0Z"/></g></svg>
+        <h2>Pro</h2>
+        <p id="info-price3">$15/mo</p>
+        <h6 id="free-months3"> 2 months free</h6>
+      </div>
+    </div>
+<div class="monthly-yearly">
+ <div>
+  <label id="month">Monthly</label>
+  <label id="onof" class="on-off" onclick="onOff()">
+    <div  id="circle" class="circle"></div>
+  </label>
+  <label id="year">yearly</label>
+ </div>
+</div>
+<div class="back-next">
+  <button onclick="backtostep1()" id="back-btn" type="submit">Go Back</button>
+  <button onclick="next3()" id="next3"   type="submit">Next Step</button>
+</div>
+  </div>
+</section>
+<!-- step 2 end -->
+
+
+<!-- step 3 start -->
+<section id="step-3">
+  <div class="left-bar">
+<div class="Personal-info">
+  <div class="info">
+  <div class="num">1</div>
+  <div class="text">  <p>Step 1</p>
+    <h1>Your info</h1></div>
+</div>
+<div class="info">
+  <div class="num">2</div>
+  <div class="text">  <p>Step 2</p>
+    <h1> Select plan</h1></div>
+</div>
+<div class="info">
+  <div class="num1">3</div>
+  <div class="text">  <p>Step 3</p>
+    <h1>  Add-ons</h1></div>
+</div>
+<div class="info">
+  <div class="num">4</div>
+  <div class="text">  <p>Step 4</p>
+    <h1>  Summary</h1></div>
+</div>
+</div>
+  </div>
+  <div class="right-bar">
+    <h1>Pick add-ons</h1>
+    <p> Add-ons help enhance your gaming experience.</p>
+    <div onclick="item3first()" id="step-3-item" class="step-3-item">
+ <div class="item3-button">
+  <svg id="svg1" xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9"><path fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/></svg>
+ </div>
+      <div class="step-3-text">
+        <h2>Online service</h2>
+        <p> Access to multiplayer games</p>
+      </div>
+      <h3 id="pricefirst"> +$1/mo</h3>
+    </div>
+    <div  onclick="item3second()"  id="step-3-item2" class="step-3-item">
+      <div class="item3-button">
+       <svg id="svg2" xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9"><path fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/></svg>
+      </div>
+           <div class="step-3-text">
+             <h2>Larger storage</h2>
+             <p>  Extra 1TB of cloud save</p>
+           </div>
+           <h3 id="pricesecond">+$2/mo</h3>
+         </div>
+         <div onclick="item3third()" id="step-3-item3" class="step-3-item">
+          <div  class="item3-button">
+           <svg id="svg3" xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9"><path fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/></svg>
+          </div>
+               <div class="step-3-text">
+                 <h2>Customizable Profile</h2>
+                 <p>Custom theme on your profile</p>
+               </div>
+               <h3 id="pricethird">+$2/mo</h3>
+             </div>
+   <div class="step-3buttons">
+    <button class="back-step-3" onclick="backstep3()">Go Back</button>
+    <button class="step-3-button" onclick="totalcost2()" type="submit">Next Step</button>
+   </div>
+  </div>
+</section>
+<!-- step 3 end -->
+
+<!-- step 4 start -->
+
+<section id="step-4">
+<div class="left-bar">
+<div class="Personal-info">
+<div class="info">
+<div class="num">1</div>
+<div class="text">  <p>Step 1</p>
+<h1>Your info</h1></div>
+</div>
+<div class="info">
+<div class="num">2</div>
+<div class="text">  <p>Step 2</p>
+<h1> Select plan</h1></div>
+</div>
+<div class="info">
+<div class="num">3</div>
+<div class="text">  <p>Step 3</p>
+<h1>  Add-ons</h1></div>
+</div>
+<div class="info">
+<div class="num1">4</div>
+<div class="text">  <p>Step 4</p>
+<h1>  Summary</h1></div>
+</div>
+</div>
+</div>
+<div class="right-bar">
+<h1>Finishing up</h1>
+<p>Double-check everything looks OK before confirming.</p>
+
+<div class="step-4-content">
+  <div class="step-4-item-1">
+    <div class="step-4-display">
+      <h1>Arcade <span>(Monthly)</span></h1>
+      <h3 id="h3"></h3>
+    </div>
+    <a href="#">Change</a>
+  </div>
+  <div class="step-4-line"></div>
+  <div class="step-4-item-1">
+    <div class="step-4-display">
+      <h2 id="storage">online service</h2>
+      <h3 id="storage21">+$1/mo</h3>
+    </div>
+  </div>
+  <div class="step-4-item-last">
+    <div class="step-4-display">
+      <h2 id="storage2">Larger storage</h2>
+      <h3 id="storage22">+$2/mo</h3>
+    </div>
+  </div>
+</div>
+<h2 class="total-step-4">Total(per month)<span id="totall"></span></h2>
+<div class="but-step4">
+<button class="btn-step-4-back" onclick="backstep4()">Go Back</button>
+<button class="btn-step-4" onclick="confirm()" type="submit">Confirm</button>
+</div>
+</div>
+</section>
+<!-- step-4-end -->
+
+
+<!-- step-5-final -->
+
+
+<section id="step-5">
+<div class="left-bar">
+<div class="Personal-info">
+<div class="info">
+<div class="num">1</div>
+<div class="text">  <p>Step 1</p>
+<h1>Your info</h1></div>
+</div>
+<div class="info">
+<div class="num">2</div>
+<div class="text">  <p>Step 2</p>
+<h1> Select plan</h1></div>
+</div>
+<div class="info">
+<div class="num">3</div>
+<div class="text">  <p>Step 3</p>
+<h1>  Add-ons</h1></div>
+</div>
+<div class="info">
+<div class="num1">4</div>
+<div class="text">  <p>Step 4</p>
+<h1>  Summary</h1></div>
+</div>
+</div>
+</div>
+<div class="thank-you">
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><g fill="none"><circle cx="40" cy="40" r="40" fill="#F9818E"/><path fill="#E96170" d="M48.464 79.167c.768-.15 1.53-.321 2.288-.515a40.04 40.04 0 0 0 3.794-1.266 40.043 40.043 0 0 0 3.657-1.63 40.046 40.046 0 0 0 12.463-9.898A40.063 40.063 0 0 0 78.3 51.89c.338-1.117.627-2.249.867-3.391L55.374 24.698a21.6 21.6 0 0 0-15.332-6.365 21.629 21.629 0 0 0-15.344 6.365c-8.486 8.489-8.486 22.205 0 30.694l23.766 23.775Z"/><path fill="#FFF" d="M40.003 18.333a21.58 21.58 0 0 1 15.31 6.351c8.471 8.471 8.471 22.158 0 30.63-8.47 8.47-22.156 8.47-30.627 0-8.47-8.472-8.47-22.159 0-30.63a21.594 21.594 0 0 1 15.317-6.35Zm9.865 15c-.316.028-.622.15-.872.344l-12.168 9.13-5.641-5.642c-1.224-1.275-3.63 1.132-2.356 2.356l6.663 6.663c.56.56 1.539.63 2.173.156l13.326-9.995c1.122-.816.43-2.993-.956-3.013a1.666 1.666 0 0 0-.17 0Z"/></g></svg>
+<h1>Thank you!</h1>
+<p>  Thanks for confirming your subscription! We hope you have fun 
+using our platform. If you ever need support, please feel free 
+to email us at support@loremgaming.com.</p>
+</div>
+</div>
+</section>
+  <!-- Finishing up
+  Double-check everything looks OK before confirming. -->
+
+  <!-- Dynamically add subscription and add-on selections here -->
+
+  <!-- Total (per month/year)
+
+  Go Back
+  Confirm -->
+
+  <!-- Step 4 end -->
+
+  <!-- Step 5 start -->
+
+  <!-- Thank you!
+
+  Thanks for confirming your subscription! We hope you have fun 
+  using our platform. If you ever need support, please feel free 
+  to email us at support@loremgaming.com.
+
+  Step 5 end -->
+  
+   <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>  -->
+
+  <script src="script.js"></script>
+</body>
+</html>
